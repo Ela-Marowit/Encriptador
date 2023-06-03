@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptor</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Philosopher:ital,wght@1,400;1,700&family=Play&family=Raleway:wght@400;600&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <div class="titulo">
+                <h1 class="im_logo"><img src="imagenes/logo.png" alt="logo de alura"></h1>
+                <div class="t">
+                    <p class="t1">Encriptador de texto.</p>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <section class="part1">
+                <div class="mensaje1">
+                    <script>
+                        function enviarTexto(){
+                            var texto = document.getElementById("i_Text").value .toLowerCase()
+                            .replaceAll("e","enter")
+                            .replaceAll("i","imes")
+                            .replaceAll("a","ai")
+                            .replaceAll("o","ober")
+                            .replaceAll("u","ufat")
+                            .replaceAll(" ","‏")
+                            .replaceAll(new RegExp(/[èéêëê]/g),"enter")
+                            .replaceAll(new RegExp(/[ìíîïî]/g),"imes")
+                            .replaceAll(new RegExp(/[àáâãäåî]/g),"ai")
+                            .replaceAll(new RegExp(/[òóôõöô]/g),"ober")
+                            .replaceAll(new RegExp(/[ùúûüû]/g),"ufat")
+                            .replaceAll(new RegExp(/ñ/g),"n")
+                            .replaceAll(new RegExp(/\W!‏/g),"")
+                            .replaceAll("_","")
+                            ;
+                            document.getElementById("r_Text").value = texto;
+                        }
+                    </script>
+
+                    <textarea type="text" id="i_Text" autofocus placeholder="Ingrese el texto aquí"></textarea>
+                    <div class="advertencia">
+                        <img class="circulo" src="imagenes/Group.png">
+                        <p class="mi">Solo letras minúsculas y sin acentos</p>
+                    </div>
+                    
+                    <div class="botones">
+                        <input type="button" id="botonText" onclick="enviarTexto()" value="Encriptar">
+                        <script>
+                            function reenviarTexto(){
+                                var texto = document.getElementById("i_Text").value
+                                .replaceAll("enter","e")
+                                .replaceAll("imes","i")
+                                .replaceAll("ai","a")
+                                .replaceAll("ober","o")
+                                .replaceAll("ufat","u")
+                                .replaceAll("‏"," ");
+                                document.getElementById("r_Text").value = texto;
+                            }
+                        </script>
+
+                        <input type="button" id="botonReenviar"  onclick="reenviarTexto()" value="Desencriptar">
+                    </div>
+                </div>
+            </section>
+
+            <section class="part2">
+                <div class="mensaje2">
+                    <!--es la pantalla donde sale el mensaje-->
+                    <textarea type="text" id="r_Text" readonly="readonly" placeholder="Aquí estará el texto encriptado o desencriptado."></textarea>
+                    <!--<img src="imagenes/engra.png" alt="engranage de busqueda">-->
+
+                    <script>
+                        function copiar(){
+                            let copiarInput = document.querySelector("#r_Text");
+                            copiarInput.select();
+                            document.execCommand("copy");
+                    }
+                    </script>
+
+                    <input id="copiar" type="button" value="Copiar" onclick="copiar()">
+                </div>
+
+            </section>
+        </main>
+    </body>
+    <footer>
+        <p class="Copyright">&copy Copyright Daniela Espinosa - 2023</p>
+    </footer>
+</html>
+

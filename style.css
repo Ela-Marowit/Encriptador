@@ -1,0 +1,236 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    
+}
+
+body{
+    min-height: 100vh;
+    max-width: 100vw;
+    
+}
+html body{
+    font-family:'Play', sans-serif;
+    background-image:url("imagenes/fondo.png");
+}
+
+/* TITULO */
+
+header{
+    background-color: rgb(178, 186, 187);
+    padding-left: 5%;
+    padding-top: 3%;
+    height: 20vh;
+    border-bottom:solid 3px;
+    
+}
+
+.titulo{
+    margin-left: 5%;
+    padding-bottom: 2%;
+}
+
+.im_logo{
+    float:right;
+    margin-right: 13%;
+}
+
+.t.t1{
+    display: inline;
+}
+
+.t1{
+    font-size: 2.8em;
+    text-shadow: 2px 1px 3px rgb(21, 67, 96);
+}
+
+/* ESTO ES ENCRIPTOR Y SUS BOTONES*/
+
+main{
+    background-image:url("imagenes/fondo.png"),linear-gradient(rgb(178, 186, 187),rgb(46, 64, 83 ),black);
+    background-repeat: no-repeat;
+} 
+
+main section{
+    margin-left: 5%;
+    padding-left: 5%;
+    
+}
+
+section{
+    height: 70vh;
+    padding-top: 3%;
+}
+
+textarea {
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.mensaje1{
+    width: 40vw;
+}
+
+.part1{
+    padding-bottom: 2%;
+    float:left;
+}
+
+.part2{
+    padding-bottom: 3%;
+    display: flex;
+}
+
+#i_Text{  
+    width: 30vw;
+    height: 40vh;
+    border-radius: 10px;
+    font-size: 1.25em;
+    font-family:'Play', sans-serif;
+    background-color: rgb(236, 240, 241);
+    box-shadow: 5px 4px rgba(0, 0, 0, 0.5);
+}
+.advertencia{
+    margin-top:3%;
+    margin-bottom: 2%;
+}
+.circulo{
+    float:left;
+}
+.mi{
+    display: inline;
+    padding-left:3%;
+    color: darkgray;
+}
+/*BOTONES ENCRIPTOR Y DESINCRIPTOR*/
+
+.botones{
+    display: flex;
+}
+#botonText {
+    width: 14vw;
+    margin-left:0.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family:'Play', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:5px 4px rgb(0,0,0,0.5);
+    margin-bottom: 10%;
+    background-color: rgb(178, 186, 187);
+}
+#botonReenviar{
+    width: 14vw;
+    margin-left:5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family:'Play', sans-serif;
+    font-weight: bold;
+    cursor:pointer;
+    box-shadow: 5px 4px rgb(0,0,0,0.5);
+    margin-bottom: 10%;
+    background-color: rgb(178, 186, 187);
+}
+
+/* ESTA PARTE ES PARA EL DESCENCIPTADOR Y EL BOTON DE COPIAR*/
+.mensaje2{
+    width: 40vw;
+}
+
+#r_Text{
+    width: 30vw;
+    height: 40vh;
+    border-radius: 10px;
+    font-size: 1.25em;
+    font-family:'Play', sans-serif;
+    background-color: rgb(236, 240, 241);
+    box-shadow: 5px 4px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-input-placeholder{
+    white-space: pre-line;
+    position: relative;
+    top: -7px;
+}
+
+#copiar{
+    width: 14vw;
+    margin-left:0%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family:'Play', sans-serif;
+    font-weight: bold;
+    cursor:pointer;
+    box-shadow: 5px 4px rgb(0,0,0,0.5);
+    background-color: rgb(178, 186, 187);
+    margin-top: 4%;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: black; 
+    padding-bottom: 2%;
+    height: 10vh;
+}
+footer p{
+    text-align: center;
+    color: rgb(123, 137, 150);
+}
+
+@media screen and (max-width:480px){
+   
+    * { 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    section{
+        height: 70vh;
+        padding-top: 3%;
+    }
+
+    .part1{
+        padding-bottom: 2%;
+        float:left;
+        height: 35vh;
+    }
+    
+    .part2{
+        padding-bottom: 2%;
+        display: block;
+    }
+    .mensaje1{
+        width: auto;
+    }
+    .mensaje2{
+        width: auto;
+    }
+    #i_Text{  
+        width: 75vw;
+        height:20vh;
+    }   
+    #r_Text{
+        width: 75vw;
+        height: 20vh;
+    }
+    #botonText {
+        width: 37vw;
+    }
+    #botonReenviar{
+        width: 37vw;
+    }   
+
+    #copiar{ 
+        display: block;
+        float: inline-end;
+        width: 37vw;
+    }
+      
+}
